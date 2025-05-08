@@ -1,0 +1,45 @@
+import { useState } from 'react';
+import axios from 'axios';
+import './App.css';
+
+function App() {
+  const [content, setContent] = useState('');
+  const [qrImage, setQrImage] = useState(null);
+
+  const generateQr = async () => {
+    if (!content.trim()) return alert('Digite algum conteúdo!');
+    const formData = new FormData();
+    formData.append('content', content);
+
+    try {
+      const response = await axios.post('http://localhost:8000/generate', formData);
+      setQrImage(response.data.image);
+    } catch (error) {
+      alert('Erro ao gerar QR Code.');
+      console.error(error);
+    }
+  };
+
+  const clearAll = () => {
+    setContent('');
+    setQrImage(null);
+  };
+
+  return (
+    <div className="container">
+      <h1>Painel Gerador de QR Code</h1>
+      <textarea
+        placeholder="Digite o conteúdo do QR Code aqui..."
+        value={content}
+        onChange={(e) => setContent(e.target.value)}
+      />
+      <div className="buttons">
+        <button onClick={generateQr}>Gerar QR Code</button>
+        <button onClick={clearAll} className="limpar">Limpar</button>
+      </div>
+      {qrImage && <img src={qrImage} alt="QR Code gerado" />}
+    </div>
+  );
+}
+
+export default App;

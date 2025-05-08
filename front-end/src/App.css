@@ -1,0 +1,38 @@
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.limpar {
+  background-color: #ff3b3f;
+  color: white;
+  border: none;
+}
+
+img {
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+}
