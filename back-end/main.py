@@ -16,7 +16,7 @@ app.add_middleware(
 
 @app.post("/generate")
 async def generate_qrcode(content: str = Form(...)):
-    # Gera o QR Code
+    # Gera o QR Code.
     img = qrcode.make(content)
     buf = BytesIO()
     img.save(buf, format="PNG")

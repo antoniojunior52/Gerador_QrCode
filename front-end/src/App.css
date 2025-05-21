@@ -21,7 +21,7 @@ body {
   width: 100%;
   padding: 30px;
   text-align: center;
-  border: 3px solid #007BFF;
+  border: 3px solid lightskyblue;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   background-color: white;
@@ -70,4 +70,26 @@ img {
   margin-top: 10px;
   width: 200px;
   height: 200px;
+}
+
+.download {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.download:hover {
+  background-color: #0056b3;
+}
+
+.qr-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
