@@ -12,7 +12,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f8f9fa;
+  background-image: url('/public/fatec.jpg'); /* imagem na pasta public */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -21,10 +24,11 @@ body {
   width: 100%;
   padding: 30px;
   text-align: center;
-  border: 3px solid lightskyblue;
+  border: none;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5); /* fundo branco com leve transparência */
+  backdrop-filter: blur(4px); /* efeito de vidro fosco */
 }
 
 h1 {
@@ -62,7 +66,7 @@ button {
 }
 
 .limpar {
-  background-color: #ff3b3f;
+  background-color: #ad0404;
   color: white;
 }
 
@@ -75,7 +79,7 @@ img {
 .download {
   margin-top: 10px;
   padding: 8px 16px;
-  background-color: #007bff;
+  background-color: #ad0404;
   color: white;
   border: none;
   border-radius: 6px;
@@ -84,7 +88,7 @@ img {
 }
 
 .download:hover {
-  background-color: #0056b3;
+  background-color:  #ad0404;
 }
 
 .qr-section {
