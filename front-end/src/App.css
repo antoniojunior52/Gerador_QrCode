@@ -1,38 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Aplica box-sizing globalmente */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  font-family: 'Poppins', sans-serif;
+}
+
 .container {
-  max-width: 600px;
-  margin: 40px auto;
+  max-width: 500px;
+  width: 100%;
+  padding: 30px;
   text-align: center;
-  font-family: sans-serif;
+  border: 3px solid #007BFF;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: white;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #2c3e50;
 }
 
 textarea {
   width: 100%;
-  height: 100px;
-  padding: 10px;
-  font-size: 16px;
+  height: 60px;
+  padding: 10px 14px;
+  font-size: 14px;
   margin-bottom: 20px;
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
   gap: 10px;
+  margin-bottom: 20px;
 }
 
 button {
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
+  border-radius: 6px;
+  border: none;
 }
 
 .limpar {
   background-color: #ff3b3f;
   color: white;
-  border: none;
 }
 
 img {
-  margin-top: 20px;
+  margin-top: 10px;
   width: 200px;
   height: 200px;
 }
