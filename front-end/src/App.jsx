@@ -25,6 +25,13 @@ function App() {
     setQrImage(null);
   };
 
+  const downloadQr = () => {
+    const a = document.createElement('a');
+    a.href = qrImage;
+    a.download = 'qrcode.png';
+    a.click();
+  };
+
   return (
     <div className="container">
       <h1>Painel Gerador de QR Code</h1>
@@ -37,7 +44,13 @@ function App() {
         <button onClick={generateQr}>Gerar QR Code</button>
         <button onClick={clearAll} className="limpar">Limpar</button>
       </div>
-      {qrImage && <img src={qrImage} alt="QR Code gerado" />}
+
+      {qrImage && (
+        <div className="qr-section">
+          <img src={qrImage} alt="QR Code gerado" />
+          <button onClick={downloadQr} className="download">Baixar QR Code</button>
+        </div>
+      )}
     </div>
   );
 }
